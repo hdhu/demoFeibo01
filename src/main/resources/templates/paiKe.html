@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+		<title>排课</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<link rel="stylesheet" href="css/innerpage.css" />
+		<script src="layui/layui.js"></script>
+		<script>
+			layui.use(["form","element","laydate"],function(){
+				var form=layui.form;
+				var element=layui.element;
+				var laydate=layui.laydate;
+				var $=layui.$;
+				
+				laydate.render({          //开始日期
+					elem:"#specific-time"
+					,min:0
+					,value: new Date()
+			    })	
+			    
+			   $(".setting-time button").click(function(){  //星期
+			   	if($(this).hasClass("xingqi-num")){
+			   		$(this).removeClass("xingqi-num");
+			   	}else{
+			   		$(this).addClass("xingqi-num");
+			   	}
+			   });
+			   
+			   laydate.render({
+			   	  elem:"#shijiandian"
+			   	  ,type:"time"
+			   });
+			});
+		</script>
+	</head>
+	<body>
+         <div id="paiKe">
+         	<header>
+         		<button class="layui-btn layui-btn-normal fl">学生排课</button>
+         		<p class="fl">排课步骤：搜索学生/班级 -> 选择排课订单 -> 选择上课星期和时间 -> 查询可用老师排课
+         		   <span>(排当天课至少提前30分钟)</span>
+         		</p>
+         	</header>
+         	
+         
+			   <form class="layui-form clearfix" action="">
+					<div class="layui-form-item  fl">
+						<div class="layui-input-inline search-common">
+							<input type="text" name="title" required lay-verify="required" placeholder="搜索学生" autocomplete="off" class="layui-input">
+							<i class="layui-icon">&#xe615;</i>
+						</div>
+					</div>
+					
+					<div class="layui-form-item  fl" style="width:50%;">
+						<select name="city" lay-verify="">
+						  <option value="">选择订单</option>
+						  <option value="010"></option>
+						  <option value="021"></option>
+						  <option value="0571"></option>
+						  <div style="width:500px; height:500px; background:red;">dddd</div>
+						</select>  
+					</div>	
+					
+				
+						<div class="layui-collapse fl" lay-filter="test">
+			
+								<div class="layui-colla-item clearfix">
+									<h2 class="layui-colla-title">其它设置</h2>
+									<div class="layui-colla-content">
+								       <div class="setting-option">
+								       	  <p>可用老师类型：混合老师</p>
+								       	  <p class="m-t-12">上课老师：</p>
+								       	    <div class="layui-form-item">
+											   
+											    <div class="layui-input-block">
+											      <input type="radio" name="sex" value="不限" title="不限" checked>
+											      <input type="radio" name="sex" value="男" title="男">
+											      <input type="radio" name="sex" value="女" title="女" >
+											    </div>
+											 </div>
+											 
+											 <p class="m-t-12">可用老师排课规则：</p>
+								       	    <div class="layui-form-item">
+											 
+											    <div class="layui-input-block">
+											      <input type="radio" name="paike-rule" value="专属老师优先" title="专属老师优先" checked>
+											      <input type="radio" name="paike-rule" value="综合能力优先" title="综合能力优先">
+											      <input type="radio" name="paike-rule" value="排课最多优先" title="排课最多优先" >
+											    </div>
+											 </div>											 
+								       </div>
+								    </div>
+						        </div>
+						</div>
+				</form>
+		      
+		     <div class="time fl">
+		     	<div class="date">
+		     		开始日期：
+		     		<div class="layui-inline"  >
+		     			<input type="text" class="layui-input" id="specific-time"/>
+		     		</div>
+		     	</div>
+		     </div>
+         	
+        		     
+		     	<div class="jie-num fl">
+		     		需求节数：
+		     		<div class="layui-inline"  >
+		     			<input type="number" name="number" min="1"  class="layui-input"/>
+		     	   </div>
+		      </div>
+ 
+ 		     	<div class="setting-time fl">
+		     		设置时间：
+		     		<div class="layui-inline"  >
+		     			<button class="layui-btn  layui-btn-primary">周一</button>
+		     			<button class="layui-btn  layui-btn-primary">周二</button>
+		     			<button class="layui-btn  layui-btn-primary">周三</button>
+		     			<button class="layui-btn  layui-btn-primary">周四</button>
+		     			<button class="layui-btn  layui-btn-primary">周五</button>
+		     			<button class="layui-btn  layui-btn-primary">周六</button>
+		     			<button class="layui-btn  layui-btn-primary">周日</button>
+		     	   </div>
+		      </div>
+         	<div class="clearfix"></div>
+         	
+         	   <div class="hour">
+         	   	时间节点：
+		     		<div class="layui-inline"  >
+		     			<input type="text" class="layui-input" id="shijiandian"  placeholder="选择时间点"/>
+		     		</div>
+		      </div>
+		      
+		      <div style="margin-top:30px;">
+		      	  <button class="layui-btn layui-btn-normal">查询可用老师</button>
+		      	  <button class="layui-btn layui-btn-normal">查询组合老师</button>
+		      	  <button class="layui-btn layui-btn-normal">一键排课</button>
+		      </div>
+		     
+         </div>
+	</body>
+</html>

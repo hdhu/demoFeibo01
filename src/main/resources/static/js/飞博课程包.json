@@ -1,0 +1,143 @@
+{
+	"msg": "",
+	"code": 1000,
+	"data": {
+		"pageCount": 102,
+		"total": 508,
+		"pageNo": 1,
+		"entries": [{
+			"phi_price": 12000,
+			"expires_date": "2099-01-01 00:00:00",
+			"total_lesson": 8,
+			"student_type": 2,
+			"en_name": "Chinese and Western Fests Groupclass",
+			"short_title": "",
+			"west_price": 24000,
+			"syllabus": "",
+			"tag": [{
+				"description": "初高中学生。",
+				"id": 2,
+				"name": "Mid-High School"
+			}, {
+				"description": "大班课，6人以上.\nGroup class which have more than 6 students.",
+				"id": 5,
+				"name": "Group Class"
+			}, {
+				"description": "青少年，小学，一般6岁以上(older Than 6).",
+				"id": 31,
+				"name": "Elementary School"
+			}],
+			"period": 731,
+			"class_way": 1,
+			"duration": 50,
+			"title_img": "",
+			"id": 7803,
+			"name": "中西方节日班课"
+		}, {
+			"phi_price": 6000,
+			"expires_date": "2099-01-01 00:00:00",
+			"total_lesson": 8,
+			"student_type": 2,
+			"en_name": "1vN Chinese and Western Fests",
+			"short_title": "",
+			"west_price": 12000,
+			"syllabus": "",
+			"tag": [{
+				"description": "幼儿，3岁到5岁. \nYoung Children，3--5 Years old.",
+				"id": 1,
+				"name": "Kindergarten"
+			}, {
+				"description": "代表只能上1对多班课。",
+				"id": 28,
+				"name": "1VN(N<=6)"
+			}, {
+				"description": "青少年，小学，一般6岁以上(older Than 6).",
+				"id": 31,
+				"name": "Elementary School"
+			}],
+			"period": 731,
+			"class_way": 3,
+			"duration": 25,
+			"title_img": "",
+			"id": 7771,
+			"name": "中西方节日 1vN"
+		}, {
+			"phi_price": 3000,
+			"expires_date": "2099-01-01 00:00:00",
+			"total_lesson": 8,
+			"student_type": 1,
+			"en_name": "Chinese and Western Fests",
+			"short_title": "",
+			"west_price": 8000,
+			"syllabus": "",
+			"tag": [{
+				"description": "幼儿，3岁到5岁. \nYoung Children，3--5 Years old.",
+				"id": 1,
+				"name": "Kindergarten"
+			}, {
+				"description": "代表只能上1对1课程。",
+				"id": 30,
+				"name": "1对1标签"
+			}, {
+				"description": "青少年，小学，一般6岁以上(older Than 6).",
+				"id": 31,
+				"name": "Elementary School"
+			}],
+			"period": 731,
+			"class_way": 1,
+			"duration": 25,
+			"title_img": "",
+			"id": 7770,
+			"name": "中西方节日"
+		}, {
+			"phi_price": 0,
+			"expires_date": "2099-01-01 00:00:00",
+			"total_lesson": 1,
+			"student_type": 1,
+			"en_name": "(1v1 DT) Trial_Grades5&6",
+			"short_title": "",
+			"west_price": 0,
+			"syllabus": "",
+			"tag": [{
+				"description": "动态课件标签",
+				"id": 29,
+				"name": "动态课件"
+			}, {
+				"description": "小学试听。",
+				"id": 34,
+				"name": "Elementary School Trial"
+			}],
+			"period": 731,
+			"class_way": 1,
+			"duration": 25,
+			"title_img": "",
+			"id": 7733,
+			"name": "小学一对一试听（5-6年级）（动态）"
+		}, {
+			"phi_price": 0,
+			"expires_date": "2099-01-01 00:00:00",
+			"total_lesson": 1,
+			"student_type": 1,
+			"en_name": "(1v1 DT) Trial_Grades3&4",
+			"short_title": "",
+			"west_price": 0,
+			"syllabus": "",
+			"tag": [{
+				"description": "动态课件标签",
+				"id": 29,
+				"name": "动态课件"
+			}, {
+				"description": "小学试听。",
+				"id": 34,
+				"name": "Elementary School Trial"
+			}],
+			"period": 731,
+			"class_way": 1,
+			"duration": 25,
+			"title_img": "",
+			"id": 7732,
+			"name": "小学一对一试听（3-4年级）（动态）"
+		}]
+	},
+	"success": true
+}

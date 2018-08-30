@@ -1,0 +1,54 @@
+{
+	"code": 0,
+	"msg": "",
+	"count": 500,
+	"data": [
+		{
+			"id": 1,
+			"number": "cpq",
+			"xiaoming": "桦树湾昌平分校",
+			"address": "昌平",
+			"provinces": "北京市",
+			"edit": "<span class='edit-text'>编辑</span>"
+		}, {
+			"id": 2,
+			"number": "WDHD",
+			"xiaoming": "桦树湾海淀区分校",
+			"address": "海淀",
+			"provinces": "北京市",
+			"edit": "<span class='edit-text'>编辑</span>"
+		},
+				{
+			"id": 3,
+			"number": "cyq",
+			"xiaoming": "桦树湾朝阳区分校",
+			"address": "朝阳",
+			"provinces": "北京市",
+			"experience": 255,
+			"edit": "<span class='edit-text'>编辑</span>"		
+		}, {
+			"id": 4,
+			"number": "dcq",
+			"xiaoming": "桦树湾东城区分校",
+			"address": "东城",
+			"provinces": "北京市",	
+			"edit": "<span class='edit-text'>编辑</span>"
+		},
+				{
+			"id": 5,
+			"number": "xcq",
+			"xiaoming": "桦树湾西城区分校",
+			"address": "西城",
+			"provinces": "北京市",
+			"edit": "<span class='edit-text'>编辑</span>"			
+		}, {
+			"id": 6,
+			"number": "ftq",
+			"xiaoming": "桦树湾丰台区分校",
+			"address": "丰台",
+			"provinces": "北京市",
+			"edit": "<span class='edit-text'>编辑</span>"
+		}
+		]
+}
+		

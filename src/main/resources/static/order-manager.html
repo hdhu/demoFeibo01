@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+	<head>
+	    <meta charset="UTF-8">
+		<title>学生订单（管理员可见）</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<link rel="stylesheet" href="css/innerpage.css" />
+		<script src="layui/layui.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script>
+			layui.use(["laypage",'laydate','element','form'], function() {
+	              var laypage=layui.laypage;
+	              var laydate = layui.laydate;
+	              var element=layui.element;
+	              var form=layui.form;
+	            
+	                  laypage.render({    //分页
+	                  	elem:'pagenation'
+	                  	,count:'50'
+	                  });
+	    
+	    	     laydate.render({
+	    	     	elem:'#times-1'
+	    	     	,type: 'datetime'
+	    	     	 ,format:'yyyy-MM-dd HH:mm'
+	    	     })
+	                  
+	              $(".amend").click(function(){
+	              	 //修改学生姓名
+	                  	$(".username-n").removeAttr("readOnly").addClass("username");
+	                  	
+	                 //修改上课时间 	
+	                 $(".times").addClass("times-add");
+	                      laydate.render({
+	                      	elem: '.times'
+	                      	 ,type: 'datetime'
+	                      	 ,format:'yyyy-MM-dd HH:mm'
+	                      });
+	                  
+	                  
+	                  //修改按钮影藏，显示确认修改按钮
+	                  $(this).hide();
+	                  $("#affirm").css("visibility","visible");
+	                });
+	        }); 
+	       
+
+	   
+		</script>
+	</head>
+	<body>
+		
+       <div class="layui-container order-student">
+       	  <div style="float:right;"><a href="">登录</a></div>
+       	  <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+			  <ul class="layui-tab-title">
+			    <li class="layui-this">订单开课</li>
+			    <li>自主开课</li>
+			  </ul>
+			  <div class="layui-tab-content">
+			  	 <div class="layui-tab-item layui-show">
+			  	 	
+       	   <div class="layui-row ordered">
+       	   	  <div class="layui-col-md12 danhao">订单号：<span>121212121212121212</span></div>
+       	   	    <div class="layui-col-md4 col-1" >
+       	   	   
+       	   	    	<div class="fl course-intro">
+       	   	    		<p><a href="">[特色产品] 中西方节日班课</a></p>
+       	   	    		<p>课程类型：一对一</p>
+       	   	    	
+       	   	    		<p>上课时间：
+       	   	    			<input type="text"  class="layui-input times-f times" value="2019-03-03 15:00">
+       	   	    		</p>
+       	   	            <p>上课老师：Ada</p>
+       	   	    	</div>
+       	   	    </div>
+       	   	    
+       	   	    <div class="layui-col-md4 col-2" >
+       	   	        <p>学生姓名：
+       	   	        	<input type="text"  value="李星星" class="username-n"  readonly="readonly" >
+       	   	        </p>
+       	   	        <p>联系电话：<span>12348578548</span></p>
+       	   	        <p style="font-family:'宋体'">初始课程：<span>新概念英语第一节</span></p>
+       	   	        <p>课程数量：<span>5</span></p>
+       	   	    </div>
+       	   	    
+       	   	    <div class="layui-col-md4 col-3" >
+       	   	        <p>订单状态：<span>未开通</span></p>
+       	   	        <p>下单时间：2019-03-01 15：00</p>
+       	   	        
+       	   	        <p><a  class="layui-btn  layui-btn-normal">开通</a>
+       	   	        	<a  class="layui-btn  layui-btn-normal amend" >修改</a>
+       	   	        	<a  class="layui-btn  layui-btn-normal" id="affirm" >确认修改</a>
+       	   	        </p>
+       	   	    </div>
+       	   </div>
+       	   
+       	   <div id="pagenation" style="text-align:center;"></div>
+		</div>
+                 <div class="layui-tab-item layui-form">
+                 	  <div class="layui-row ordered">
+       	   	  
+       	   	    <div class="layui-col-md6 col-1" >
+       	   	      <div class="layui-form-item">
+				    <label class="layui-form-label">选择课程：</label>
+				    <div class="layui-input-block">
+		               <select name="course" lay-verify="" lay-search>
+							  <option value="010">[特色产品] 中西方节日班课</option>
+							  <option value="021">[特色产品] 朗文国际英语3 1vN</option>
+							  <option value="0571">[特色产品] 超越口语3级 1vN</option>
+							  <option value="0575">[特色产品] 小童星3级  1vN</option>
+					   </select> 
+				   </div>
+       	   	      </div>
+       	   	      
+       	   	      <div class="layui-form-item">
+				    <label class="layui-form-label">课程类型：</label>
+				    <div class="layui-input-block">
+		    	    		<select name="courseType" lay-verify="">
+							  <option value="010">一对一</option>
+							  <option value="021">一对多</option>
+							</select>
+				   </div>
+       	   	      </div>		
+       	   	     
+ 
+       	   	     <div class="layui-form-item">
+				    <label class="layui-form-label">上课时间：</label>
+				    <div class="layui-input-block">
+		    	      <input type="text"  class="layui-input" id="times-1" value="">
+				   </div>
+       	   	     </div>       	   	     
+       	   	    
+       	   	    <div class="layui-form-item">
+       	   	    	<label class="layui-form-label">上课老师：</label>
+       	   	        <div class="layui-input-block">
+		    	       	 <select name="teacher" lay-verify="" lay-search>
+							  <option value="0">Ada</option>
+							  <option value="1">Alin</option>
+							  <option value="2">Biuss</option>
+							  <option value="3">Weirsm</option>
+						</select> 
+				   </div>
+       	   	    </div>
+       	   	            
+       	   	    </div>
+       	   	    
+       	   
+       	   	    
+       	   	    <div class="layui-col-md6 col-3" >
+       	   	      <div class="layui-form-item">
+       	   	    	<label class="layui-form-label">学生姓名：</label>
+       	   	        <div class="layui-input-block">
+		   	        	<select name="student-name" lay-verify="" lay-search>
+							<option value="00">李星星</option>
+							<option value="11">蓝月亮</option>
+						    <option value="22">王云</option>
+							<option value="33">张宇</option>
+						</select>
+				   </div>
+       	   	    </div>
+       	   	    
+       	   	    <div class="layui-form-item">
+       	   	    	<label class="layui-form-label">联系电话：</label>
+       	   	        <div class="layui-input-block" style="padding-top:5px;">
+		   	            <span >12348578548</span>
+				   </div>
+       	   	    </div>
+       
+       	   	    <div class="layui-form-item">
+       	   	    	<label class="layui-form-label">下单时间：</label>
+       	   	        <div class="layui-input-block" style="padding-top:5px;">
+		   	            <span>2019-03-01 15：00</span>
+				   </div>
+       	   	    </div>
+              	   	      
+       	   	        
+       	   	    
+       	   	        
+       	   	        <p style="margin-left:120px;"><a  class="layui-btn  layui-btn-normal">开通</a>
+       	   	        <span style="color:red;">返回消息</span>
+       	   	        </p>
+       	   	        
+       	   	      
+       	   	    </div>
+       	   </div>
+                 </div>
+			  </div>
+		  </div>      
+
+       	  
+       </div>
+	</body>
+</html>

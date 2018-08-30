@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<div>
+
+  用户名：<input th:id="${user.username}" th:name="${user.username}" th:value="${user.username}" ><br>
+    日期：  <input th:id="${user.birthday}" th:name="${user.birthday}" th:value="${user.birthday}"><br>
+    日期：  <input th:id="${user.birthday}" th:name="${user.birthday}" th:value="${#dates.format(user.birthday,'yyyy-MM-dd')}">
+</div>
+<div th:object="${user}">
+    名字：<input th:id="*{username}" th:name="*{username}" th:value="*{username}" >
+    日期：<input th:value="*{birthday}">
+<br>
+
+    <form th:action="@{/test/form}" th:object="${user}" th:method="post">
+        <input type="text" th:field="*{username}">
+        <input type="submit">
+    </form>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+		<title>学生列表</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<link rel="stylesheet" href="css/innerpage.css" />
+		<link rel="stylesheet" href="css/student.css" />
+		<script src="layui/layui.js"></script>
+		<script>
+			layui.use("form", function() {
+	                  var form = layui.form;
+                  });
+		</script>
+	</head>
+	<body>
+        <div class="student-list">
+        	<h2>学生列表 | 所属校区: <span>桦树湾培训学校</span></h2>
+      
+        
+      		<div class="search">
+			   <form class="layui-form" action="">
+							<div class="layui-form-item fl">
+								<button class="layui-btn">添加学生</button>
+							</div>	
+							
+							<div class="layui-form-item fl">
+								<div class="layui-input-inline search-common ">
+									<input type="text" name="title" required lay-verify="required" placeholder="按姓名、联系电话、编号搜索" autocomplete="off" class="layui-input">
+									<i class="layui-icon">&#xe615;</i>
+								</div>
+							</div>	
+                            
+                              <div class="layui-form-item fl">
+							      <select name="city" lay-verify="required">
+							        <option value="">学生学习状态</option>
+							        <option value="0">初始状态</option>
+							        <option value="1">已排试听</option>
+							        <option value="2">正式在读</option>
+							        <option value="3">辍学离校</option>
+							        <option value="4">转化失败</option>
+							        <option value="5">作废账号</option>
+							      </select>
+							  </div>
+							  
+							   <div class="layui-form-item fl">
+							   	 <label for="" class="student">我的学员
+							   	  <i class="layui-icon layui-icon-help" title="勾选之后只搜索分配当前登录用户的学员"></i>
+							   	  <span>:</span>
+							   	   <input type="checkbox" name="aaa" >
+							   	 </label>
+							   </div>
+							   
+							    <div class="layui-form-item fl">
+							    	<a href="" class="layui-btn layui-btn-normal">搜索</a>
+							    </div>
+				</form>
+			</div>
+			
+		
+
+    <table class="layui-table">									
+      <thead>
+        <tr>
+          <th>编号</th>
+          <th>中文名</th>
+          <th>英文名</th>
+          <th>用户名</th>
+          <th>联系电话</th>
+          <th>注册时间</th>
+          <th>
+          	  <form action="" class="layui-form" lay-even>
+          	   <div class="layui-form-item fl">
+					<select name="city" lay-verify="required">
+						<option value="0">生源（全部）</option>
+						<option value="1">二维码</option>
+						<option value="2">机构添加</option>
+						<option value="3">移动端</option>
+						<option value="4">官网试听</option>
+				    </select>
+				    </div>
+				    </form>
+			 
+          </th>
+          <th>上课工具</th>
+          <th>学习状态</th>
+          <th>操作</th>
+        </tr> 
+      </thead>
+      <tbody>			
+        <tr>
+          <td>HSWPX0004</td>
+          <td><a href="">杨志博</a></td>
+          <td>angzhiboy</td>
+          <td>wd0005</td>
+          <td>18611577396</td>
+          <td>2018-04-10 15:12:50</td>
+          <td>机构添加</td>
+          <td>你有课V3</td>
+          <td>初始状态</td>
+          <td>
+          	<a href=""><i class="layui-icon">&#xe642;</i>编辑</a> &nbsp;|&nbsp;
+          	<a href="">为他买课</a> &nbsp;|&nbsp;
+          	<a href=""><i class="layui-icon">&#xe66f;</i>以他登录</a> &nbsp;|&nbsp;
+          	<a href=""></i>重置密码</a> &nbsp;|&nbsp;
+          	<a href="">分配学管</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>HSWPX0003</td>
+          <td><a href="">赵申豪</a></td>
+          <td>zhao</td>
+          <td>wd0006</td>
+          <td>13520838987</td>
+          <td>2017-12-11 16:58:36</td>
+          <td>机构添加</td>
+          <td>你有课V3</td>
+          <td>初始状态</td>
+          <td>
+          	<a href=""><i class="layui-icon">&#xe642;</i>编辑</a> &nbsp;|&nbsp;
+          	<a href="">为他买课</a> &nbsp;|&nbsp;
+          	<a href=""><i class="layui-icon">&#xe66f;</i>以他登录</a> &nbsp;|&nbsp;
+          	<a href=""></i>重置密码</a> &nbsp;|&nbsp;
+          	<a href="">分配学管</a>
+          </td>          
+        </tr>
+        
+        <tr>
+          <td>HSWPX0002</td>
+          <td><a href="">桦树湾教育</a></td>
+          <td></td>
+          <td>huashuwanjiaoyu</td>
+          <td></td>
+          <td>2017-12-05 16:30:35</td>
+          <td>机构添加</td>
+          <td>你有课V3</td>
+          <td>初始状态</td>
+          <td>
+          	<a href=""><i class="layui-icon">&#xe642;</i>编辑</a> &nbsp;|&nbsp;
+          	<a href="">为他买课</a> &nbsp;|&nbsp;
+          	<a href=""><i class="layui-icon">&#xe66f;</i>以他登录</a> &nbsp;|&nbsp;
+          	<a href=""></i>重置密码</a> &nbsp;|&nbsp;
+          	<a href="">分配学管</a>
+          </td>          
+        </tr>
+        
+        <tr>
+          <td>HSWPX0001</td>
+          <td><a href="">桦树湾</a></td>
+          <td></td>
+          <td>huashuwan123</td>
+          <td>18611577396</td>
+          <td>2017-11-22 15:59:44</td>
+          <td>机构添加</td>
+          <td>你有课V3</td>
+          <td>初始状态</td>
+          <td>
+          	<a href=""><i class="layui-icon">&#xe642;</i>编辑</a> &nbsp;|&nbsp;
+          	<a href="">为他买课</a> &nbsp;|&nbsp;
+          	<a href=""><i class="layui-icon">&#xe66f;</i>以他登录</a> &nbsp;|&nbsp;
+          	<a href=""></i>重置密码</a> &nbsp;|&nbsp;
+          	<a href="">分配学管</a>
+          </td>          
+        </tr>        
+      </tbody>
+    </table>
+	</div>
+	</body>
+	
+</html>

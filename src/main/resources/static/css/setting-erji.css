@@ -1,0 +1,66 @@
+/*设置页面二级页面样式*/
+.setting-inner-personal .personal-inner,.setting-inner-agencyInfo .agencyInfo-inner,
+.branch-campus {
+    padding: 42px 40px 42px 40px;
+}
+ .setting-inner-personal .personal-inner .personal-head, .branch-campus-header,
+ .setting-inner-agencyInfo .agencyInfo-inner .agencyInfo-head {
+    display: block;
+    height: 30px;
+    border-bottom: 1px solid #d4d4d4;
+    }
+   .setting-inner-personal .personal-inner .personal-head span,
+   .branch-campus-header span,
+   .setting-inner-agencyInfo .agencyInfo-inner .agencyInfo-head span {
+          display: inline-block;
+          height: 30px;
+          width: 24px;
+          background-color: #01a1e8;
+          vertical-align: top; }
+  .setting-inner-personal .personal-inner .personal-head h2 ,
+  .branch-campus-header h2,
+  .setting-inner-agencyInfo .agencyInfo-inner .agencyInfo-head h2{
+          font-size: 22px;
+          display: inline-block;
+          line-height: 30px;
+          margin-left: 15px; }          
+.personal-inner .layui-form .layui-input-block  input[type=text] {
+	    max-width: 300px;
+    height: 36px;
+    padding: 0 0 0 8px;
+    border: 1px solid #c7c7c7;
+    color: #353535;
+    vertical-align: middle;
+}
+
+#reset-password { display:none;}
+ #reset-password form{ padding:40px; }
+ #reset-password h3{   
+ 	             text-align:center;
+                  font-size: 18px;
+				   font-family: 微软雅黑;
+				    
+				    padding: 10px 0px 10px 18px;
+				    margin-bottom:10px;
+    }
+    
+/*设置页面下用户管理页面样式*/
+.edit{color:red;}
+.lesson {margin-top:20px;}
+.lesson .search{position: relative; color: rgba(0, 0, 0, 0.87);}
+.lesson .search input{border-radius:50px; width: 240px;   
+                      border: 1px solid rgba(34, 36, 38, 0.15);
+                      line-height:32px;
+                      padding-left:13px;
+                      padding-right:13px;
+                      }
+.lesson .search .layui-icon{position:absolute; right:13px; top:8px;}  
+#user-table .layui-table tbody tr:hover{background:#fff;} 
+.addUser{display:none;}
+
+.lesson {overflow:hidden;}
+.editPage{display:none;}
+ .editPage .layui-form  .layui-input-block{max-width:420px;}   
+/*弹出层公共样式*/
+.layer-common .layui-form  .layui-input-block{max-width:420px;}                   
+ .start{color:red; padding-left:5px; vertical-align:middle;}

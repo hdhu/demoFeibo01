@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+	<head>
+	    <meta charset="UTF-8">
+		<title>课程设置页面</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<link rel="stylesheet" href="css/innerpage.css" />
+		<script src="layui/layui.js"></script>
+		<script>
+            layui.use(["element","carousel",'layer'],function(){
+            	var element=layui.element;
+            	var carousel=layui.carousel;
+            	var $ = layui.$ ;
+            	var layer=layui.layer;
+            	
+            	carousel.render({     //轮播
+            		elem: '#carousel'
+            		,width: '800'
+            		,height:'600'
+            		,arrow: 'always' 
+            	});
+            	
+            	$(".preview").click(function(){
+            		layer.open({
+            			type:1,
+            			 content: $('#carousel'),
+            			 area: ['800px', '600px']
+            		});
+            	})
+            })
+
+	   
+		</script>
+	</head>
+	<body>
+       <div class="layui-container course-details">
+       	<iframe src="header-common.html" style="border:none; float:right; width:280px; height:29px;"></iframe>
+       	  <h2 >了解课程设置</h2>
+       	  <div class="clearfix"></div>
+       	  
+       	     <div class="layui-row">
+			    <div class="layui-col-md3 course-detail-left">
+			       <a href="javascript:;"><img src="images/course-detail.jpg"></a>
+			    </div>
+			    <div class="layui-col-md9 course-detail-right">
+			        <h3>[特色产品]超越口语2级 1vN</h3>
+			        <p class="">课程类型：<span>一对一</span></p>
+			        <p>课时：<span>40</span>课时</p>
+			        <p>课程有效期至：<span>2099-01-01 00:00:00</span></p>
+			        <p>适合人群：<span>高中生 大学生 成人</span></p>
+			    </div>
+          </div>
+          
+          <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief" style="margin-top:20px;">
+			  <ul class="layui-tab-title">
+			    <li class="layui-this">课程介绍</li>
+			    <li>一对一时刻表</li>
+			  </ul>
+			  <div class="layui-tab-content">
+			  	 <div class="layui-tab-item layui-show">
+			  	 	<p style=";text-align: justify;font-size: 14px;font-family: DengXian;white-space: normal">课程名称</p><p style=";text-align: justify;font-size: 14px;font-family: DengXian;white-space: normal">中西方节日<span style=";padding: 0px;border: 0px;outline: 0px">&nbsp;Chinese and Western Festivals</span></p>
+			  	 	<p style=";text-align: justify;font-size: 14px;font-family: DengXian;white-space: normal"><span style=";padding: 0px;border: 0px;outline: 0px">&nbsp;</span></p>
+			  	 	<p style=";text-align: justify;font-size: 14px;font-family: DengXian;white-space: normal">课程简介</p>
+			  	 	<p style=";text-align: justify;font-size: 14px;font-family: DengXian;white-space: normal">★中西方节日一共<span style=";padding: 0px;border: 0px;outline: 0px">8</span>课，每课介绍一个重要节日，包括中国的元宵节、清明节、端午节和中秋节，以及西方的万圣节、感恩节、圣诞节和复活节。这套课程不仅让小朋友们学习和了解西方节日习俗，而且教会小朋友们如何用英语介绍中国文化，从小培养跨文化思维和意识，为做中外沟通的桥梁打好基础 。</p>
+			  	 	<p style=";text-align: justify;font-size: 14px;font-family: DengXian;white-space: normal"><span style=";padding: 0px;border: 0px;outline: 0px">&nbsp;</span></p>
+			  	 	<p style=";text-align: justify;font-size: 14px;font-family: DengXian;white-space: normal"><span style=";padding: 0px;border: 0px;outline: 0px">&nbsp;</span></p>
+			  	 	<p style=";text-align: justify;font-size: 14px;font-family: DengXian;white-space: normal">学习目标</p>
+			  	 	<p style=";text-align: justify;font-size: 14px;font-family: DengXian;white-space: normal">★了解<span style=";padding: 0px;border: 0px;outline: 0px">8</span>个中西方重要节日的名称、相关词汇和风俗习惯</p>
+			  	 	<p style=";text-align: justify;font-size: 14px;font-family: DengXian;white-space: normal">★能够明确有条理地描述节日风俗</p>
+			  	 	<p style=";text-align: justify;font-size: 14px;font-family: DengXian;white-space: normal">★能够进行最基本的与所学节日相关内容的自由对话和讨论</p>
+			  	 	<p style=";text-align: justify;font-size: 14px;font-family: DengXian;white-space: normal"><span style=";padding: 0px;border: 0px;outline: 0px">&nbsp;</span></p>
+			  	 	<p style=";text-align: justify;font-size: 14px;font-family: DengXian;white-space: normal">适合人群</p>
+			  	 	<p style=";text-align: justify;font-size: 14px;font-family: DengXian;white-space: normal">★有基础英语水平的小学生</p>
+			  	 	<p style=";text-align: justify;font-size: 14px;font-family: DengXian;white-space: normal"><span style=";padding: 0px;border: 0px;outline: 0px">&nbsp;</span></p>
+			  	 	<p style=";text-align: justify;font-size: 14px;font-family: DengXian;white-space: normal">课程设置</p>
+			  	 	<p style=";text-align: justify;font-size: 14px;font-family: DengXian;white-space: normal">★共<span style=";padding: 0px;border: 0px;outline: 0px">8</span>课，每课一个节日主题</p>
+			  	 	<p style=";text-align: justify;font-size: 14px;font-family: DengXian;white-space: normal"><span style=";padding: 0px;border: 0px;outline: 0px">&nbsp;</span></p>
+			  	 	<p style=";text-align: justify;font-size: 14px;font-family: DengXian;white-space: normal">课程特色</p>
+			  	 	<p style=";text-align: justify;font-size: 14px;font-family: DengXian;white-space: normal">★培养跨文化思维和意识；</p><p><br></p>
+			  	 </div>
+			  	 
+                 <div class="layui-tab-item">
+                 	<div style="background:#00B7EE; line-height:30px; padding-left:10px; color:#000;">
+                 		<span style="padding-right:50px;">50分钟每次</span>
+                 		<span>共8次</span>
+                 	</div>
+                    <table class="layui-table course-time"  lay-skin="line">
+						 <colgroup>
+						    <col width="10%">
+						    <col width="70%">
+						    <col>
+						  </colgroup>
+						
+						   <tbody>
+						   	<tr>
+						      <td>第1课</td>
+						      <td>FF_Chinese_Fests01</td>
+						      <td><a href="javascript:;" class="preview">预览</a></td>
+						    </tr>
+						 
+						   <tr>
+						      <td>第2课</td>
+						      <td>FF_Chinese_Fests02</td>
+						      <td><a href="javascript:;">预览</a></td>
+						    </tr>
+						    
+						    <tr>
+						      <td>第3课</td>
+						      <td>FF_Chinese_Fests03</td>
+						      <td><a href="javascript:;">预览</a></td>
+						    </tr>
+						    
+						   <tr>
+						      <td>第4课</td>
+						      <td>FF_Chinese_Fests04</td>
+						      <td><a href="javascript:;">预览</a></td>
+						    </tr>
+						    
+						    <tr>
+						      <td>第5课</td>
+						      <td>FF_Chinese_Fests05</td>
+						      <td><a href="javascript:;">预览</a></td>
+						    </tr>
+						    
+						    <tr>
+						      <td>第6课</td>
+						      <td>FF_Chinese_Fests06</td>
+						      <td><a href="javascript:;">预览</a></td>
+						    </tr>
+
+						    <tr>
+						      <td>第7课</td>
+						      <td>FF_Chinese_Fests07</td>
+						      <td><a href="javascript:;">预览</a></td>
+						    </tr>
+						    
+						    <tr>
+						      <td>第8课</td>
+						      <td>FF_Chinese_Fests08</td>
+						      <td><a href="javascript:;">预览</a></td>
+						    </tr>						    
+						    
+						  </tbody>
+						</table>
+                 </div>
+               </div>
+	      </div> 
+</div>  
+ 
+ 		<div class="layui-carousel" id="carousel" >
+		  <div carousel-item>
+              <div><img src="images/1.jpg" alt="" /></div>
+              <div><img src="images/2.jpg" alt="" /></div>
+              <div><img src="images/3.jpg" alt="" /></div>
+              <div><img src="images/4.jpg" alt="" /></div>
+              <div><img src="images/5.jpg" alt="" /></div>
+              <div><img src="images/6.jpg" alt="" /></div>
+              <div><img src="images/7.jpg" alt="" /></div>
+              <div><img src="images/8.jpg" alt="" /></div>
+              <div><img src="images/9.jpg" alt="" /></div>
+     
+		  </div>
+         </div> 
+        
+</body>
+</html>

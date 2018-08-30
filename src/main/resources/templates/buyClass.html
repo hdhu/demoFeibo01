@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+		<title>买断老师列表</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<link rel="stylesheet" href="css/student.css" />
+		<link rel="stylesheet" href="css/innerpage.css" />
+		<script src="layui/layui.js"></script>
+		<script>
+			layui.use(["form","laydate"], function() {
+	            var form = layui.form;
+	            var laydate=layui.laydate;
+	            
+	            	laydate.render({          //限时消耗
+					elem:"#times"
+					,min:0
+					,value: new Date()
+			    })	
+      });
+		</script>
+	</head>
+	<body>
+      <div class="course">
+      	  <header>
+      	  	 <div class="layui-btn-group fl">
+			  <button class="layui-btn">学生购课</button>
+			  <button class="layui-btn">班级购课</button>
+			  <button class="layui-btn">一对多购课</button>
+            </div>
+             <div class="explain fl">购课步骤: 1. 搜索并选择学生/班级 -> 2. 搜索并选择课程包 -> 3. 点击确认购买</div>
+      	  </header>
+      	  
+      	<div class="step clearfix">
+      		<div class="c-student fl">
+      			<p class="c-title">
+      				<span class="op-guide">1、</span>
+      				选择学生:<span class="cls-required">*</span>
+      			</p>
+      			
+      			 <div class="search">
+      			 	<div class="search-common">
+						<input type="text" name="title" required lay-verify="required" placeholder="输入学生姓名, 搜索并选择学生" autocomplete="off" class="layui-input">
+						<i class="layui-icon">&#xe615;</i>
+					</div>
+      			 </div>
+      		</div>
+      		
+      		<div class="c-course fl">
+      			<div class="c-course-left p-r20 fl">
+      			 <p class="c-title">
+      				<span class="op-guide">2、</span>
+      				选择课程:<span class="cls-required">*</span>
+      			 </p>
+      			 <div class="search">
+      			 	<div class="search-common">
+						<input type="text" name="title" required lay-verify="required" placeholder="输入课程包关键字, 搜索并选择课程" autocomplete="off" class="layui-input">
+						<i class="layui-icon">&#xe615;</i>
+					</div>
+      			 </div>
+      			 
+      			 <p class="c-title">选择初始课时:
+      			 	<span class="font12"> 共 0 课时</span>
+      			 </p>
+      			 
+      			 <from class="layui-form">
+      			   <div class="layui-form-item">
+   
+    <div class="layui-input-block">
+      <select name="interest" lay-filter="aihao">
+        <option value=""></option>
+        <option value="0"></option>
+        <option value="1" selected=""></option>
+        <option value="2"></option>
+        <option value="3"></option>
+        <option value="4"></option>
+      </select>
+    </div>
+  </div>
+     </from>
+     
+      			</div>
+      			
+      			<div class="c-course-right fl">
+      				<div class="c-course-expires m-b20">
+                        <p class="c-title">
+                                                                         限时消耗:
+                            <span class="font-red-6 font12">
+                                                                           从购买该课程包开始只能排之前的课！
+                            </span>
+                        </p>
+                     <div class="date">
+		     	
+		     		<div class="layui-inline"  >
+		     			<input type="text" class="layui-input" id="times"/>
+		     		</div>
+		     		
+		     		<div  class="m-b20">
+                        <p class="c-title">设置购课节数:</p>
+                        <div class="layui-inline">
+                       <input type="number" name="number" min="1"  class="layui-input"/>
+                       </div>
+                    </div>
+		     		
+		     	</div>
+                    </div>
+      			</div>
+      		</div>
+      		
+      	</div>
+
+      <div class="c-teacher">
+      	 <p class="c-title m-b12">选择老师类型:</p>
+      	 <form class="layui-form">
+      	  <div class="layui-form-item">
+              <div class="layui-input-block">
+                <input type="radio" name="teacher" value="菲律宾老师" title="菲律宾老师" checked="">
+                <input type="radio" name="teacher" value="欧美老师" title="欧美老师">
+                <input type="radio" name="teacher" value="不限" title="不限" >
+              </div>
+          </div>
+         </form>
+      </div>
+       
+       <div class="c-paytype">
+       	 <p class="c-title m-b12">选择支付类型:
+         <span style="padding-left: 5px; color: #090; font-size: 0.8em;">说明：选择余额支付购课时不扣费，订单排课时扣费。选择
+             <label>次卡支付
+                 <code title="使用次卡支付可享有优惠的价格排非高峰期的课表，具体请咨询各区运营经理，使用次卡支付前需要先购买次卡。" >
+                 	<i class="layui-icon hand">&#xe607;</i>
+                 </code>
+             </label>
+                                       购课时一次性扣除相应的次卡数，订单排课时不扣费
+         </span>
+         </p>
+         
+          <form class="layui-form">
+      	  <div class="layui-form-item">
+              <div class="layui-input-block">
+                <input type="radio" name="teacher" value="余额支付" title="余额支付" checked="">
+                <input type="radio" name="teacher" value="次卡支付" title="次卡支付">
+              </div>
+          </div>
+         </form>
+       </div>
+       
+       <div class="c-teacher">
+       	<span class="op-guide">3、</span>
+       	<button class="layui-btn layui-btn-primary  layui-btn-disabled">确认购买</button>
+       </div>
+    </div>
+	</body>
+</html>

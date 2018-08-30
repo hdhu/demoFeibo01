@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>asfsagfsdgsgsdgdsgdg!</h1>
+
+一般 都是 <head th:fragment="header">
+    <meta charset="UTF-8" />
+    <title th:text="#{head.title}"></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" th:href="@{/static/img/favicon.gif}" type="image/gif" />
+
+    <link rel="stylesheet" th:href="@{/resources/css/bootstrap.min.css}" />
+    <link rel="stylesheet" th:href="@{/resources/css/jquery.ui.all.css}" />
+    <link rel="stylesheet" th:href="@{/resources/css/jquery.ui.customer.css}" />
+    <script th:src="@{/resources/js/jquery-1.9.1.min.js}"></script>
+    <script th:src="@{/resource/js/bootstrap.min.js}"></script>
+</head>
+下面在你要的页面 引入这个片段就行<head th:include="theme/fragments::header" /> 他就相当于jsp 中我们常用的
+
+<%@ include file="/WEB-INF/jsp/public/header.jspf"%>
+
+
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+	<head>
+	    <meta charset="UTF-8">
+		<title>老师简介</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<link rel="stylesheet" href="css/innerpage.css" />
+		<script src="layui/layui.js"></script>
+		<script>
+            layui.use(["form",'laydate'],function(){
+            	var form=layui.form;
+            	var laydate=layui.laydate;
+            	
+    
+
+				laydate.render({
+					elem: '#usableTime',
+					min: 0,
+					type: 'datetime',
+					format: 'yyyy-MM-dd HH:mm' //可任意组合
+				});
+            })
+		</script>
+	</head>
+	<body>
+      <div class="tech-wrap" >
+      	<div class="tech-section">
+      		<h4 class="tech-arct-title">
+      			<img src="images/tab_01.png" alt="teacher's profile">
+      		</h4>
+      		
+      		<div class="tech_arct_cont clearfix">
+                <div class="texh_left_msg">
+                    <p class="p_title">姓名：<span>Mari</span></p>
+                    <p class="p_title">年龄：<span>20's</span></p>
+                    <p class="p_title">性别：<span>Philippines</span></p>
+                    <p class="p_title">教龄：<span>2 years</span></p>
+                    <p class="p_title">视频链接：
+                    <a href="http://static02.121learn.com/1519637965109_be02ef54e4466c601ed0357c1509fbce.mp4" target="_blank" >Mari video link</a>
+                    </p>
+                    <p class="p_title" style="height: auto;width: 530px;">证书链接：
+                        <span style="display: inline-block; width: 430px; vertical-align: top;">
+                        	<a href="">暂无</a>
+                        </span>
+                    </p>
+                    <p class="p_title slideInLeft" style="height: auto;width: 530px;">FF证书链接：
+                        <span style="display: inline-block; width: 415px; vertical-align: top;">
+                            <a href="#">暂无</a>
+                        </span>
+                    </p>
+                </div>
+                <div class="texh_right_img">
+                    <div class="tech_pic_box scale">
+                       <img ng-src="http://static02.121learn.com/Fmiy6JWJ7V6smTb2J2VdPEaYubUN?imageView2/2/w/220/h/220/interlace/1" fb-img-load-error="avatarFemal" ng-if="teacher.profile.user.gender | isFemale" class="ng-scope" src="http://static02.121learn.com/Fmiy6JWJ7V6smTb2J2VdPEaYubUN?imageView2/2/w/220/h/220/interlace/1">
+                    </div>
+                </div>
+            </div>
+      	</div>
+      	
+      	<div class="tech-section statistics">
+            <h4 class="tech-arct-title">
+            	<img class="fadeInRightBig" src="images/tab_02.png" alt="teacher's profile">
+            </h4>
+            <div class="content">
+                <div class="classes">
+                    <p><span class="title">老师加入时间</span>
+                        <span class="classes-total" >2017年03月</span></p>
+                    <p><span class="title">老师总上课数</span>
+                        <span class="classes-total">2060课时</span></p>
+                </div>
+                <div class="pinfen clearfix">
+                    <div class="f-l total">
+                        <p class="tt">总得分</p>
+                        <p class="tc" ></p>
+                        <p class="tb">满分 5 分</p>
+                        <p class="tb">反馈数量 0 条</p>
+                    </div>
+                    <div class="f-r project">
+                        <div>
+                            <span>学生希望再跟此老师上课</span>
+                            <div class="project-bg"><div class="project-over like" style="width: 0px;"></div></div>
+                            <span class="ng-binding"></span>
+                        </div>
+                        <div>
+                            <span>课堂表现专业、会教</span>
+                            <div class="project-bg"><div class="project-over teaching_skill" style="width: 0px;"></div></div>
+                            <span class="ng-binding"></span>
+                        </div>
+                        <div>
+                            <span>有亲和力</span>
+                            <div class="project-bg"><div class="project-over friendly" style="width: 0px;"></div></div>
+                            <span class="ng-binding"></span>
+                        </div>
+                        <div>
+                            <span>善于引导学生</span>
+                            <div class="project-bg"><div class="project-over prompt" style="width: 0px;"></div></div>
+                            <span class="ng-binding"></span>
+                        </div>
+                        <div>
+                            <span>经常举例拓展</span>
+                            <div class="project-bg"><div class="project-over extend" style="width: 0px;"></div></div>
+                            <span class="ng-binding"></span>
+                        </div>
+                        <div>
+                            <span>经常鼓励学生</span>
+                            <div class="project-bg"><div class="project-over encourage" style="width: 0px;"></div></div>
+                            <span class="ng-binding"></span>
+                        </div>
+                        <div>
+                            <span>指出学生错误并纠正</span>
+                            <div class="project-bg"><div class="project-over correct" style="width: 0px;"></div></div>
+                            <span class="ng-binding"></span>
+                        </div>
+                        <div>
+                            <span>语速适中发音清晰</span>
+                            <div class="project-bg"><div class="project-over speed" style="width: 0px;"></div></div>
+                            <span class="ng-binding"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tech-section">
+            <h4 class="tech-arct-title"><img class="fadeInRightBig" src="images/tab_03.png" alt="teacher's profile"></h4>
+            <div class="text">My name is Maricor Tequison. I have always been a dedicated and determined person especially when it comes to my job.  My hobbies are  dancing, singing, and reading books and newspapers. I have been a pre-school teacher since 2015 and teaching kids is sometimes stressful but fun and exciting.  Being a teacher is a great opportunity to help and teach every person who is willing to learn. Although it is only a part of the job, it makes children embrace the study habits. Teaching makes them better people and makes their dreams come true on becoming responsible and professional someday. So as a teacher, I am very happy to see my students enjoying, smiling, and showing interest in the class. I am a kind of teacher who wants to motivate and inspire my students. I know that I am effective and capable enough to teach the students who want to learn English.</div>
+            
+        </div>
+        
+        <div class="tech-section">
+            <h4 class="tech-arct-title"><img  src="images/tab_04.png" alt="teacher's profile"></h4>
+          
+            <div class="text">
+            	Bachelor of Science, major in Psychology
+                West Negros University
+                Philippines
+            </div>
+        </div>
+        
+        <div class="tech-section">
+            <h4 class="tech-arct-title"><img src="images/tab_05.png" alt="teacher's profile"></h4>
+            <div class="text">
+ESL Teacher
+First Future Education Solutions, Inc.
+Philippines
+- Teach English language to Chinese students aged 6- 14
+- Assess the students' attitudes and performances towards learning
+- Develop the students' reading and speaking potentials
+
+
+Pre-School Teacher
+Barangay Day Care Center
+Philippines
+- Taught students aged 3-7 years old        
+- Assessed the students' attitudes and performances towards learning
+- Developed the students' reading and speaking potentials</div>
+        </div>
+      </div>
+	</body>
+</html>

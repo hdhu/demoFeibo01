@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+		<title>添加学生</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<link rel="stylesheet" href="css/innerpage.css" />
+		<link rel="stylesheet" href="css/student.css" />
+		<script src="layui/layui.js"></script>
+		<script>
+			layui.use(["form","laydate"],function(){
+				 var form = layui.form;
+				 var laydate=layui.laydate;
+				 
+				 laydate.render({
+				 	elem:'#date1'
+				 });
+			});
+		</script>
+	</head>
+	<body>
+		<div class="addStudent">
+			<h3 class="common-titile">添加学生</h3>
+			<hr />
+			<form class="layui-form add-student">
+			  <div class="layui-form-item">
+			    <label class="layui-form-label">中文名 <span>*</span></label>
+			    <div class="layui-input-block">
+			      <input type="text" name="" placeholder="" autocomplete="off" class="layui-input">
+			    </div>
+              </div>
+              
+              	<div class="layui-form-item">
+			    <label class="layui-form-label">英文名 <span>*</span></label>
+			    <div class="layui-input-block">
+			      <input type="text" name="" placeholder="填写英文名更方便老师和学生互动" autocomplete="off" class="layui-input">
+			    </div>
+              </div>
+              
+			     <div class="layui-form-item">
+			    <label class="layui-form-label">性别 <span>*</span></label>
+			    <div class="layui-input-block">
+			      <select name="" lay-filter="">
+			      	<option value="">请选择性别</option>
+			        <option value="0">男</option>
+			        <option value="1">女</option>
+				      </select>
+				    </div>
+				  </div>
+				  
+              	<div class="layui-form-item">
+			    <label class="layui-form-label">出生日期</label>
+			    <div class="layui-input-block">
+			      <input id="date1" type="text" name="" placeholder="请按 1970-01-01格式输入" autocomplete="off" class="layui-input">
+			    </div>
+              </div>
+              
+              	<div class="layui-form-item">
+			    <label class="layui-form-label">常用电话<span>*</span></label>
+			    <div class="layui-input-block">
+			      <input type="text" name="" placeholder="用于学生接受上课提醒短信" autocomplete="off" class="layui-input">
+			    </div>
+              </div>  
+              
+      	<div class="layui-form-item">
+			    <label class="layui-form-label">家长电话</label>
+			    <div class="layui-input-block">
+			      <input type="text" name="" placeholder="" autocomplete="off" class="layui-input">
+			    </div>
+              </div> 
+              
+			  <div class="layui-form-item">
+			    <label class="layui-form-label">用户名 <span>*</span></label>
+			    <div class="layui-input-block">
+			      <input type="text" name="" placeholder="" autocomplete="off" class="layui-input">
+			    </div>
+              </div>              
+              
+			  <div class="layui-form-item">
+			    <label class="layui-form-label">密码 <span>*</span></label>
+			    <div class="layui-input-block">
+			      <input type="text" name="" placeholder="" autocomplete="off" class="layui-input">
+			    </div>
+              </div>  
+              
+			  <div class="layui-form-item">
+			    <label class="layui-form-label">QQ</label>
+			    <div class="layui-input-block">
+			      <input type="text" name="" placeholder="" autocomplete="off" class="layui-input">
+			    </div>
+              </div> 
+              
+			  <div class="layui-form-item">
+			    <label class="layui-form-label">邮箱</label>
+			    <div class="layui-input-block">
+			      <input type="text" name="" placeholder="" autocomplete="off" class="layui-input">
+			    </div>
+              </div>  
+              
+			     <div class="layui-form-item">
+			    <label class="layui-form-label">所属人群</label>
+			    <div class="layui-input-block">
+			      <select name="" lay-filter="">
+			      	<option value="">请选择所属人群</option>
+			        <option value="0">学龄前</option>
+			        <option value="1">小学生</option>
+			        <option value="2">初中生</option>
+			        <option value="3">高中生</option>
+			        <option value="4">大学生</option>
+			        <option value="5">成人</option>
+			        <option value="6">其它</option>
+				      </select>
+				    </div>
+				  </div>  
+				  
+			     <div class="layui-form-item">
+			    <label class="layui-form-label">学习状态</label>
+			    <div class="layui-input-block">
+			      <select name="" lay-filter="">
+			      	<option value="">请选择学习状态</option>
+			        <option value="0">初始状态</option>
+			        <option value="1">已排试听</option>
+			        <option value="2">正是在读</option>
+			        <option value="3">辍学离校</option>
+			        <option value="4">转化失败</option>
+			        <option value="5">作废账号</option>
+				     </select>
+				    </div>
+				  </div> 
+				  
+  <div class="layui-form-item layui-form-text" style="width:100%; min-height:100px;">
+    <label class="layui-form-label">文本域</label>
+    <div class="layui-input-block">
+      <textarea name="desc" placeholder="最大长度为125字" class="layui-textarea"></textarea>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+    </div>
+  </div>		  
+			</form>
+		</div>
+	</body>
+</html>

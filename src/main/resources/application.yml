@@ -1,0 +1,133 @@
+spring:
+  profiles:
+#    active: dev
+#    active: jsp
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test
+    username: root
+    password: root
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: utf-8
+    servlet:
+      content-type: text/html
+
+
+#      spring.thymeleaf.cache
+#      是否开启模板缓存，默认true
+#      spring.thymeleaf.check-template-location
+#      是否检查模板路径是否存在，默认true
+#      spring.thymeleaf.content-type
+#      指定Content-Type，默认为: text/html
+#      spring.thymeleaf.enabled
+#      是否允许MVC使用Thymeleaf，默认为: true
+#      spring.thymeleaf.encoding
+#      指定模板的编码，默认为: UTF-8
+#      spring.thymeleaf.excluded-view-names
+#      指定不使用模板的视图名称，多个以逗号分隔.
+#      spring.thymeleaf.mode
+#      指定模板的模式，具体查看StandardTemplateModeHandlers，默认为: HTML5
+#      spring.thymeleaf.prefix
+#      指定模板的前缀，默认为:classpath:/templates/
+#      spring.thymeleaf.suffix
+#      指定模板的后缀，默认为:.html
+#      spring.thymeleaf.template-resolver-order
+#      指定模板的解析顺序，默认为第一个.
+#      spring.thymeleaf.view-names
+#      指定使用模板的视图名，多个以逗号分隔.
+
+
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java,src/main/resources
+      exclude: templates,static
+#静态文件路径
+#  mvc:
+#    static-path-pattern: /static/**
+#  resources:
+#    static-locations: classpath:/static
+
+mybatis:
+  config-file: mybatis-config.xml
+mapper_path: /mapper/**.xml
+entity_package: com.boot.demofeibo.entity
+
+
+#    #jsp
+#
+#  mvc:
+#    view:
+#      prefix: classpath:/jsp/
+##      prefix: /jsp/
+#      suffix: .html
+#      viewClass: org.springframework.web.servlet.view.JstlView
+#server:
+#  port: 8081
+# 页面默认前缀目录
+#spring.mvc.view.prefix=/WEB-INF/view/
+#spring.mvc.view.prefix=/view/
+# 响应页面默认后缀
+#spring.mvc.view.suffix=.jsp
+#
+#  freemarker:
+#    charset: UTF-8
+#    cache: false
+#    allow-request-override: false
+#    check-template-location: true
+#    content-type: text/html
+#    expose-request-attributes: false
+#    expose-session-attributes: false
+#    expose-spring-macro-helpers: false
+
+#spring.freemarker.prefix=
+#spring.freemarker.request-context-attribute=
+#spring.freemarker.settings.*=
+#spring.freemarker.suffix=.ftl
+#spring.freemarker.template-loader-path=classpath:/templates/
+#spring.freemarker.view-names=
+
+
+
+#
+# # 使用druid数据源
+#        type: com.alibaba.druid.pool.DruidDataSource
+#        driver-class-name: com.mysql.jdbc.Driver
+#        filters: stat
+#        maxActive: 20
+#        initialSize: 1
+#        maxWait: 60000
+#        minIdle: 1
+#        timeBetweenEvictionRunsMillis: 60000
+#        minEvictableIdleTimeMillis: 300000
+#        validationQuery: select 'x'
+#        testWhileIdle: true
+#        testOnBorrow: false
+#        testOnReturn: false
+#        poolPreparedStatements: true
+#        maxOpenPreparedStatements: 20
+#
+#
+#  context-path: /d
+#
+#  mybatis:
+#    mapper-locations: classpath:mapping/*.xml
+#    type-aliases-package: com.winter.model
+#  #pagehelper分页插件
+#  pagehelper:
+#      helperDialect: mysql
+#      reasonable: true
+#      supportMethodsArguments: true
+#      params: count=countSql
+#

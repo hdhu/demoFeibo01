@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>用户管理</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<link rel="stylesheet" href="css/innerpage.css" />
+		<link rel="stylesheet" href="css/setting-erji.css" />
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="layui/layui.js"></script>
+		<script>
+			layui.use(['form','layer'], function() {
+				var form = layui.form;
+				var layer=layui.layer;
+				
+				$(".layui-btn-warm.fl").click(function(){
+					layer.open({
+					type:1,
+					content: $(".addUser"),
+					title:["添加用户","font-size:16px; background:#00A0E9; color:#fff; font-weight:bold;"],
+				    area:"60%"
+					});
+			});
+				
+				
+				$(".edit").click(function(){
+					layer.open({
+					type:1,
+					content: $(".editPage"),
+					title:["编辑用户","font-size:16px; background:#00A0E9; color:#fff; font-weight:bold;"],
+				    area:"60%"
+					});	
+					
+				});
+			});
+		</script>
+
+	</head>
+	<body>
+		<div class="setting-inner-personal">
+        <div class="personal-inner">
+            <div class="personal-head">
+                <span></span>
+                <h2>我的导出</h2>
+            </div>
+          
+            <div class="user">
+            	<div class="lesson">
+            		<button class="layui-btn layui-btn-warm fl">添加用户</button>
+            		<div class="search fr">
+            			<input type="text"  placeholder="请输入关键字进行搜索"/>
+            			<i class="layui-icon" style="color:cornflowerblue;">&#xe615;</i>   
+            		</div>
+            	</div>
+            </div>
+        
+        
+        <div id="user-table">
+            <table class="layui-table user-table">
+
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>昵称</th>
+          <th>用户名</th>
+          <th>角色</th>	
+          <th>邮箱</th>	
+          <th>电话</th>	
+          <th>校区</th>	
+          <th>操作</th>
+        </tr> 
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>桦树湾培训学校</td>
+          <td>huashuwan</td>
+          <td>校长	</td>
+          <td></td>
+          <td></td>
+          <td>桦树湾培训学校</td> 
+          <td>多操作</td> 
+        </tr>
+        
+        <tr>
+          <td>2</td>
+          <td>管理员</td>
+          <td>hsw001</td>
+          <td>Student Manager</td>
+          <td></td>
+          <td></td>
+          <td>桦树湾培训学校</td> 
+          <td><span class="edit">编辑</span> | <span href="">删除</span></td>
+        </tr>							
+							
+						
+        
+        <tr>
+          <td>3</td>
+          <td>李四</td>
+          <td>lisihuashuwan</td>
+          <td>校长</td>
+          <td></td>
+          <td></td>
+          <td>桦树湾昌平分校</td>
+          <td>更多操作</td>
+        </tr>
+        
+        <tr>
+          <td>4</td>
+          <td>校长</td>
+          <td>wdhd001</td>
+          <td>校长</td>
+          <td></td>
+          <td></td>
+          <td>桦树湾海淀区分校</td> 
+          <td>更多操作</td>
+        </tr>        
+      </tbody>
+    </table>
+       </div>
+       </div>
+        </div> 
+        
+        <div class="addUser layer-common">
+        	<form class="layui-form" action="">
+  <div class="layui-form-item" style="padding-top:10px;">
+    <label class="layui-form-label">昵称<span class="start">*</span></label>
+    <div class="layui-input-block">
+      <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+    </div>
+  </div>
+  
+ <div class="layui-form-item">
+   <label class="layui-form-label">角色<span class="start">*</span></label>
+    <div class="layui-input-block">
+      <select name="city" lay-verify="required">
+        <option value="0">校长</option>
+        <option value="1">Student Manager</option>
+      </select>
+    </div>
+  </div>
+  
+    <div class="layui-form-item">
+    <label class="layui-form-label">邮箱</label>
+    <div class="layui-input-block">
+      <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+    </div>
+  </div>
+  
+    <div class="layui-form-item">
+    <label class="layui-form-label">用户名<span class="start">*</span></label>
+    <div class="layui-input-block">
+      <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+    </div>
+  </div>
+  
+   <div class="layui-form-item">
+   <label class="layui-form-label">性别</label>
+    <div class="layui-input-block">
+      <select name="city" lay-verify="required">
+      	<option value="">请选择</option>
+        <option value="0">男</option>
+        <option value="1">女</option>
+      </select>
+    </div>
+  </div>
+  
+     <div class="layui-form-item">
+   <label class="layui-form-label">校区<span class="start">*</span></label>
+    <div class="layui-input-block">
+      <select name="city" lay-verify="required">
+      	<option value="">请选择</option>
+        <option value="0">桦树湾昌平分校</option>
+        <option value="1">桦树湾海淀区分校</option>
+        <option value="2">桦树湾朝阳区分校</option>
+        <option value="3">桦树湾东城区分校</option>
+        <option value="4">桦树湾西城区分校</option>
+        <option value="5">桦树湾丰台区分校</option>
+      </select>
+    </div>
+  </div>
+  
+      <div class="layui-form-item">
+    <label class="layui-form-label">电话号码</label>
+    <div class="layui-input-block">
+      <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+    </div>
+  </div>
+  
+  <div class="layui-form-item">
+    <label class="layui-form-label">密码</label>
+    <div class="layui-input-inline">
+      <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+    </div>
+    
+  </div>
+  
+  
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button type="reset" class="layui-btn layui-btn-primary">保存</button>
+      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+    </div>
+  </div>
+</form>
+        </div>
+    
+    <!--编辑用户页面-->
+<div class="editPage">
+               	<form class="layui-form" action="">
+  <div class="layui-form-item" style="padding-top:10px;">
+    <label class="layui-form-label">昵称<span class="start">*</span></label>
+    <div class="layui-input-block">
+      <input type="text" name="title" required  lay-verify="required" placeholder="管理员" autocomplete="off" class="layui-input">
+    </div>
+  </div>
+  
+ <div class="layui-form-item">
+   <label class="layui-form-label">角色<span class="start">*</span></label>
+    <div class="layui-input-block">
+      <select name="city" lay-verify="required">
+        <option value="0">校长</option>
+        <option value="1">Student Manager</option>
+      </select>
+    </div>
+  </div>
+  
+    <div class="layui-form-item">
+    <label class="layui-form-label">邮箱</label>
+    <div class="layui-input-block">
+      <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+    </div>
+  </div>
+  
+    <div class="layui-form-item">
+    <label class="layui-form-label">用户名<span class="start">*</span></label>
+    <div class="layui-input-block">
+      <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+    </div>
+  </div>
+  
+   <div class="layui-form-item">
+   <label class="layui-form-label">性别</label>
+    <div class="layui-input-block">
+      <select name="city" lay-verify="required">
+      	<option value="">请选择</option>
+        <option value="0">男</option>
+        <option value="1">女</option>
+      </select>
+    </div>
+  </div>
+  
+     <div class="layui-form-item">
+   <label class="layui-form-label">校区<span class="start">*</span></label>
+    <div class="layui-input-block">
+      <select name="city" lay-verify="required">
+      	<option value="">请选择</option>
+        <option value="0">桦树湾昌平分校</option>
+        <option value="1">桦树湾海淀区分校</option>
+        <option value="2">桦树湾朝阳区分校</option>
+        <option value="3">桦树湾东城区分校</option>
+        <option value="4">桦树湾西城区分校</option>
+        <option value="5">桦树湾丰台区分校</option>
+      </select>
+    </div>
+  </div>
+  
+      <div class="layui-form-item">
+    <label class="layui-form-label">电话号码</label>
+    <div class="layui-input-block">
+      <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+    </div>
+  </div>
+  
+  <div class="layui-form-item">
+    <label class="layui-form-label">密码</label>
+    <div class="layui-input-inline">
+      <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+    </div>
+    
+  </div>
+  
+  
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button type="reset" class="layui-btn layui-btn-primary">保存</button>
+      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+    </div>
+  </div>
+</form> 	
+ </div>     
+	</body>
+</html>

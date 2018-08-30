@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<!--这个页面通过程序无法加载样式-->
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>桦树湾培训学校</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/font/iconfont.css">
+	</head>
+
+	<!--头部导航-->
+
+	<body class="layui-layout-body">
+		<div class="layui-layout layui-layout-admin">
+			<div class="layui-header">
+
+				<!-- 头部区域（可配合layui已有的水平导航） -->
+				<ul class="layui-nav layui-layout-left">
+					<li class="layui-nav-item">
+						<div class="chrome-wrap">
+							<a href="" class="download_chrome">
+								<img src="images/chrome-32-32.png" alt="">
+							</a>
+						</div>
+						<dl class="layui-nav-child">
+							<dd>
+								<h2>推荐使用Chrome浏览器</h2></dd>
+							<dd>
+								<a href="javascript:;" class="download">
+									<button class="layui-btn layui-btn-sm layui-btn-normal layui-btn-radius">下载</button>
+								</a>
+								<i class="iconfont icon-windows1"></i>
+								<span class="wrap">windows安装包</span>
+								<hr>
+							</dd>
+
+							<dd>
+								<a href="javascript:;" class="download">
+									<button class="layui-btn layui-btn-sm layui-btn-normal layui-btn-radius">下载</button>
+								</a>
+								<i class="iconfont icon-iconfontapple"></i>
+								<span class="wrap">MacOS安装包</span>
+							</dd>
+						</dl>
+					</li>
+
+					<li class="layui-nav-item">
+						<code class="tool">
+						<img src="images/YHC-icon-23k.png" alt="" class="tool-image" style="padding-bottom:6px;"/>
+						</code>
+
+						<div class="layui-nav-child">
+							<p style="text-align:center;"><i class="layui-icon">&#xe63b;</i> 你有课APP</p>
+							<div><img src="images/qr_code.png" alt="" class="erweima" /></div>
+						</div>
+					</li>
+
+					<li class="layui-nav-item">
+						<code class="tool">
+						<img src="images/app-icon.png" alt="" class="tool-image"/>
+						</code>
+
+						<div class="layui-nav-child Zmanager">
+							<h2>外教管家</h2>
+							<div class="manager">
+								<div class="left-column">
+									<p><i class="iconfont icon-anzhuo" style="padding-right:5px;"></i>Android版</p>
+									<p><img src="images/download_tool_wjgj_qrcode.png" alt="" /></p>
+									<p>
+										<a href="">点击下载</a>
+									</p>
+									<div class="line"></div>
+								</div>
+
+								<div class="right-column">
+									<p><i class="iconfont icon-anzhuo" style="padding-right:5px;"></i>Android版</p>
+									<p><img src="images/download_tool_wjgj_qrcode.png" alt="" /></p>
+									<p>
+										<a href="">点击下载</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li class="layui-nav-item">
+						<code class="tool">
+						<img src="images/wechat.png" alt="" class="tool-image"/>
+						</code>
+
+						<div class="layui-nav-child">
+							<h2 class="title">飞博运营支持公众号</h2>
+							<p class="fa-erweima"><img src="images/qr_code.png" alt="" class="erweima" /></p>
+						</div>
+					</li>
+
+					<li class="layui-nav-item">
+						<code class="tool">
+						<img src="images/shortcuts.png" alt="" class="tool-image"/>
+						</code>
+
+						<div class="layui-nav-child add">
+							<ol>
+								<li>
+									<a href=""><i class="iconfont icon-addition Zicon"></i>添加学生</a>
+								</li>
+								<li>
+									<a href=""><i class="iconfont icon-addition Zicon"></i>添加班级</a>
+								</li>
+								<li>
+									<a href=""><i class="iconfont icon-gouwucheman Zicon"></i>购课</a>
+								</li>
+							</ol>
+
+						</div>
+					</li>
+				</ul>
+				<ul class="layui-nav layui-layout-right" id="info">
+					<li class="layui-nav-item">
+						<a href="">系统更新日志</a>
+						<span class="dot"></span>
+					</li>
+
+					<li class="layui-nav-item">
+						未来7天欧美外教可排课：
+						<span class="money">8972</span> 节
+						<a href="" target="_blank">查看详情</a>
+
+					</li>
+
+					<li class="layui-nav-item">
+						余额：
+						<i class="iconfont icon-yen"></i>
+						<span class="money">146238</span> 元
+						<a href="" target="_blank">去充值</a>
+
+					</li>
+
+					<li class="layui-nav-item itemPad">
+						<i class="iconfont icon-mail"></i>
+					</li>
+
+					<li class="layui-nav-item itemPad">
+						<i class="iconfont icon-alarmmonitor"></i>
+					</li>
+
+					<li class="layui-nav-item itemPad">
+						<i class="iconfont icon-shipin1"></i>
+						<div class="layui-nav-child shipin">
+							<a href="" target="_blank"><i class="iconfont icon-bofang"></i></a>
+							基础操作视频
+						</div>
+					</li>
+
+					<li class="layui-nav-item itemPad tiaoshi">
+						<button class="layui-btn layui-btn-radius layui-btn-normal">
+								<i class="iconfont icon-diannao"></i>
+								<span>调试设备</span>
+							</button>
+						<div class="layui-nav-child">
+							<ol>
+								<li>
+									<a href=""><i class="layui-icon">&#xe600;</i>系统设备要求</a>
+								</li>
+								<li>
+									<a href=""><i class="layui-icon">&#xe600;</i>V3教室调试指导</a>
+								</li>
+								<li>
+									<a href=""><i class="layui-icon">&#xe600;</i>V3教室网络自测</a>
+								</li>
+								<li>
+									<a href=""><i class="layui-icon">&#xe652;</i>1V3调试指导视频</a>
+								</li>
+								<li>
+									<a href=""><i class="layui-icon">&#xe608;</i>一对一调试</a>
+								</li>
+								<li>
+									<a href=""><i class="layui-icon">&#xe608;</i>大班课调试</a>
+								</li>
+								<li>
+									<a href=""><i class="layui-icon">&#xe608;</i>一对多调试</a>
+								</li>
+							</ol>
+
+						</div>
+					</li>
+
+					<li class="layui-nav-item" id="school">
+						<p>桦树湾培训学校</p>
+						<div class="layui-nav-child">
+							<ol>
+								<li>
+									<a href=""><i class="layui-icon">&#xe609;</i>我的导出</a>
+								</li>
+								<li>
+									<a href=""><i class="ayui-icon">&#xe614;</i>个人设置</a>
+								</li>
+								<li>
+									<a href=""><i class="ayui-icon">&#xe65c;</i>退出登录</a>
+								</li>
+							</ol>
+
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="layui-side layui-bg-black">
+				<div class="layui-side-scroll">
+					<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+			    <h3><i class="iconfont icon-grid"></i></h3>
+	         <ul class="nav-item">
+						  <li class="homepage selected"> 
+						  	<i class="iconfont icon-shouye"></i><span>首页</span></li>
+
+									  <li>
+						  	<a href="" target="_blank">
+						  		<i class="iconfont icon-shezhi"></i>
+						  		<span>设置</span>
+						  	</a>
+						  </li>
+						  
+						  				  <li>
+						  	<a href="" target="_blank">
+						  		<i class="iconfont icon-yen"></i>
+						  		<span>账户</span>
+						  	</a>
+						  </li>
+		  				  <li>
+						  	<a href="" target="_blank">
+						  		<i class="iconfont icon-gouwucheman"></i>
+						  		<span>购课</span>
+						  	</a>
+						  </li>						  
+	  				  <li>
+						  	<a href="" target="_blank">
+						  		<i class="iconfont icon-kebiaox"></i>
+						  		<span>课程</span>
+						  	</a>
+						  </li>	
+						  
+						  		  <li>
+						  	<a href="" target="_blank">
+						  		<i class="iconfont icon-kechengguanli"></i>
+						  		<span>课表</span>
+						  	</a>
+						  </li>
+						  		  <li>
+						  	<a href="" target="_blank">
+						  		<i class="iconfont icon-wentidan"></i>
+						  		<span>问题</span>
+						  	</a>
+						  </li>
+						  
+						  <li>
+						  	<a href="" target="_blank">
+						  		<i class="iconfont icon-xuesheng"></i>
+						  		<span>学生</span>
+						  	</a>
+						  <!--	<ul class="item-sub">
+                <li>
+                    <h3>学生</h3>
+                    <p><a href="">添加学生</a></p>
+                    <p><a href="">学生列表</a></p>
+                    <h3>班级</h3>
+                    <p><a href="">添加班级</a></p>
+                    <p><a href="">班级列表</a></p>
+                    <p><a href="">班级组列表</a></p>
+                </li>
+         </ul>-->
+						  </li>	
+						  
+						  		  <li>
+						  	<a href="teacher-erji.html" target="mainContent">
+						  		<i class="iconfont icon-laoshi"></i>
+						  		<span>老师</span>
+						  	</a>
+						  </li>	
+						  
+						  		  <li>
+						  	<a href="" target="">
+						  		<i class="iconfont icon-tongji"></i>
+						  		<span>统计</span>
+						  	</a>
+						  </li>	
+						  
+						  		  <li>
+						  	<a href="" target="_blank">
+						  		<i class="iconfont icon-xiazai"></i>
+						  		<span>工具</span>
+						  	</a>
+						  </li>	
+						  
+						  		  <li>
+						  	<a href="" target="_blank">
+						  		<i class="iconfont icon-fenxiang"></i>
+						  		<span>物料</span>
+						  	</a>
+						  </li>							  
+					
+	         </ul>
+		
+				</div>
+			</div>
+
+			<div class="layui-body" style="width:100%; height:100%;">
+				<!-- 内容主体区域 -->
+				<div style="padding: 15px; background:#F6F6F6; width:100%; height:100%;">
+					 <iframe src="" frameborder="0" name="mainContent" width="100%" height="100%"></iframe>
+				</div>
+			</div>
+
+		
+		</div>
+
+		<script src="layui/layui.js"></script>
+		<script>
+			//一般直接写在一个js文件中
+			layui.use('element', function() {
+				var element = layui.element;
+				var $=layui.$;
+				
+			/*$(".layui-side ul>li").click(function(){
+					$(this).addClass("selected").siblings().removeClass("selected");
+					
+			});*/
+    
+			});
+		</script>
+	</body>
+
+</html>

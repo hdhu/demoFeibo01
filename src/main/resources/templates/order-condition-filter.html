@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+	<head>
+	    <meta charset="UTF-8">
+		<title>课程设置页面</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<link rel="stylesheet" href="css/innerpage.css" />
+		<script src="layui/layui.js"></script>
+		<script>
+            layui.use(["form",'laydate'],function(){
+            	var form=layui.form;
+            	var laydate=layui.laydate;
+            	
+    
+
+				laydate.render({
+					elem: '#usableTime',
+					min: 0,
+					type: 'datetime',
+					format: 'yyyy-MM-dd HH:mm' //可任意组合
+				});
+            })
+		</script>
+	</head>
+	<body class="filter-course-main">
+		桦树湾教育
+	  <div class="layui-row filter-course">
+	    <div class="layui-col-md4">
+	      <h3 class="filter-con" href="">[特色产品] 中西方节日班课</h3>
+	      <div  class="filter-con">
+			 <lable>课程类型:</lable>
+			 <span>大班课</span>
+		   </div>
+		   
+		   	<div class="filter-con">
+				<lable>适用人群:</lable>
+				<button class="layui-btn layui-btn-primary layui-btn-xs">高中生</button>
+				<button class="layui-btn layui-btn-primary layui-btn-xs">大学生</button>
+				<button class="layui-btn layui-btn-primary layui-btn-xs">成人</button>							
+			</div>
+			
+			<div class="filter-con">
+			      课时：共8课时 | 50分钟/课时
+			</div>
+	    </div>
+	    
+	    
+	       <form action="" class="layui-form select-con">
+					<div class="layui-col-md4">		
+							<div class="layui-form-item">
+								<div class="layui-input-block">
+									<select name="city" lay-verify="required" lay-search>
+										<option value="">请选择老师国籍</option>
+											<option value="0">欧美老师</option>
+											<option value="1">菲律宾老师</option>
+									</select>
+								</div>
+						   </div>
+							
+							<div class="layui-form-item">
+								<div class="layui-input-block">
+									<select name="city" lay-verify="required" lay-search>
+										<option value="">请选择你喜欢的老师</option>
+											<option value="0">Aileen</option>
+											<option value="1">Angel_R</option>
+											<option value="2">Ruth</option>
+											<option value="3">Roda</option>
+									
+									</select>
+								</div>
+                           </div>
+                           
+                        <div style="float:right; line-height:30px;"><a href="javascript:;">查看老师详情</a></div>
+                   
+							 <div class="layui-form-item">
+								<div class="layui-input-block">
+									<input type="text" class="layui-input fl" id="usableTime" placeholder="选择时间点" />
+								</div>
+							</div>
+                            
+                              
+							 </div>
+							 
+							<div class="layui-col-md4">
+							  <div class="layui-form-item">
+								<div class="layui-input-block">
+									<select name="initial-course">
+										<option value="">请选择初始课时</option>
+										<option value="10">第1节课</option>
+										<option value="11">第2节课</option>
+										<option value="12">第3节课</option>
+										<option value="13">第4节课</option>
+									</select>
+								</div>
+							  </div>
+
+							  <div class="layui-form-item">
+							  	<label class="layui-form-label">课程数量</label>
+								<div class="layui-input-block">
+					              <input type="number" name="points" min="1" value="" class="layui-input" />
+								</div>
+							  </div>
+							  
+							  <div class="layui-form-item">
+							    <div class="layui-input-block">
+							      <button class="layui-btn" lay-submit lay-filter="formDemo">提交</button>
+							      
+							    </div>
+							   </div>
+							</div>
+						</form>
+	   
+   </div>
+
+</body>
+</html>

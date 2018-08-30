@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+	<head>
+	    <meta charset="UTF-8">
+		<title>学生订单</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<link rel="stylesheet" href="css/innerpage.css" />
+		<script src="layui/layui.js"></script>
+		<script>
+			layui.use("laypage", function() {
+	                  var laypage=layui.laypage;
+	                  laypage.render({
+	                  	elem:'pagenation'
+	                  	,count:'50'
+	                  });
+                  });
+		</script>
+	</head>
+	<body>
+		
+       <div class="layui-container order-student">
+ <iframe src="header-common.html" style="border:none; float:right; width:280px; height:29px;"></iframe>
+			
+       	  <h2>我的订单</h2>
+       	   <div class="layui-row ordered">
+       	   	  <div class="layui-col-md12 danhao">订单号：<span>121212121212121212</span></div>
+       	   	    <div class="layui-col-md4 col-1" >
+       	   	   
+       	   	    	<div class="fl course-intro">
+       	   	    		<p><a href="">[特色产品] 中西方节日班课</a></p>
+       	   	    		<p>课程类型：一对一</p>
+       	   	    		 <p>上课时间：2019-03-03 15：00</p>
+       	   	    	</div>
+       	   	    </div>
+       	   	    
+       	   	    <div class="layui-col-md4 col-2" >
+       	   	        <p>上课老师：Ada</p>
+       	   	        <p>初始课程：<span>新概念英语第一节</span></p>
+       	   	        <p>课程数量：<span>5</span></p>
+       	   	    </div>
+       	   	    
+       	   	    <div class="layui-col-md4 col-3" >
+       	   	        <p>订单状态：<span>未开通</span></p>
+       	   	        <p>下单时间：2019-03-01 15：00</p>
+       	   	    </div>
+       	   </div>
+       	   
+       	   <div id="pagenation" style="text-align:center;"></div>
+       </div>
+	</body>
+</html>
